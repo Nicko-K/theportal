@@ -1,4 +1,4 @@
-var APP_VERSION = 1;
+var APP_VERSION = 2;
 
 var CACHE_NAME = `the_portal_v${APP_VERSION}`;
 
@@ -11,9 +11,9 @@ self.addEventListener('install', function(event) {
                 cache.addAll([
                     './manifest.json',
                     './favicon.ico',
-                    './449.35423b74f0844c892006.js',
-                    './main.35423b74f0844c892006.js',
-                    './runtime.35423b74f0844c892006.js',
+                    './449.2a3b8f91e9927a7e957b.js',
+                    './main.2a3b8f91e9927a7e957b.js',
+                    './runtime.2a3b8f91e9927a7e957b.js',
                     './assets/header.jpeg',
                     './fonts/Mulish-Black.eot',
                     './fonts/Mulish-Black.ttf',
