@@ -1,3 +1,34 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/><link rel="manifest" href="manifest.json"><title>PWA The portal</title><link rel="icon" href="favicon.ico"><script defer="defer" src="runtime.2a3b8f91e9927a7e957b.js"></script><script defer="defer" src="449.2a3b8f91e9927a7e957b.js"></script><script defer="defer" src="main.2a3b8f91e9927a7e957b.js"></script></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script>if ('serviceWorker' in navigator) {
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/><link rel="manifest" href="manifest.json"><title>PWA The portal</title><link rel="icon" href="favicon.ico"><script defer="defer" src="runtime.f40d5e75bd69b6d605a5.js"></script><script defer="defer" src="449.f40d5e75bd69b6d605a5.js"></script><script defer="defer" src="main.f40d5e75bd69b6d605a5.js"></script></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script>window.$knaportalprompt = null;
+            window.addEventListener('beforeinstallprompt', function(e) {
+                e.preventDefault();
+                window.$knaportalprompt = e;
+                function tryAddEventListner() {
+                    const btn = document.getElementById('app-install-btn');
+                    if (!btn) {
+                        setTimeout(tryAddEventListner, 1000);
+                        return;
+                    }
+                    btn.addEventListener('click', function() {
+                        window.$knaportalprompt.prompt();
+                        window.$knaportalprompt.userChoice.then(function(result){
+                            if (result.outcome !== 'dismissed') {
+                                window.$knaportalprompt = null;
+                                btn.style.display = 'none';
+                            }
+                        });
+                    });
+                    btn.style.display = 'block';
+                }
+                tryAddEventListner();
+            });
+            window.addEventListener('appinstalled', function(){
+                window.$knaportalprompt = null;
+                const btn = document.getElementById('app-install-btn');
+                if (!btn) {
+                    return;
+                }
+                btn.style.display = 'none';
+            })
+            if ('serviceWorker' in navigator) {
                 navigator.serviceWorker.register('sw.js');
             }</script></body></html>
