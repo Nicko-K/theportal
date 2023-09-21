@@ -1,4 +1,4 @@
-var APP_VERSION = 3;
+var APP_VERSION = 4;
 
 var CACHE_NAME = `the_portal_v${APP_VERSION}`;
 
@@ -12,38 +12,6 @@ self.addEventListener('install', function(event) {
                     './manifest.json',
                     './favicon.ico',
                     './assets/header.jpeg',
-                    './fonts/Mulish-Black.eot',
-                    './fonts/Mulish-Black.ttf',
-                    './fonts/Mulish-Black.woff',
-                    './fonts/Mulish-Black.woff2',
-                    './fonts/Mulish-Bold.eot',
-                    './fonts/Mulish-Bold.ttf',
-                    './fonts/Mulish-Bold.woff',
-                    './fonts/Mulish-Bold.woff2',
-                    './fonts/Mulish-ExtraBold.eot',
-                    './fonts/Mulish-ExtraBold.ttf',
-                    './fonts/Mulish-ExtraBold.woff',
-                    './fonts/Mulish-ExtraBold.woff2',
-                    './fonts/Mulish-ExtraLight.eot',
-                    './fonts/Mulish-ExtraLight.ttf',
-                    './fonts/Mulish-ExtraLight.woff',
-                    './fonts/Mulish-ExtraLight.woff2',
-                    './fonts/Mulish-Light.eot',
-                    './fonts/Mulish-Light.ttf',
-                    './fonts/Mulish-Light.woff',
-                    './fonts/Mulish-Light.woff2',
-                    './fonts/Mulish-Medium.eot',
-                    './fonts/Mulish-Medium.ttf',
-                    './fonts/Mulish-Medium.woff',
-                    './fonts/Mulish-Medium.woff2',
-                    './fonts/Mulish-Regular.eot',
-                    './fonts/Mulish-Regular.ttf',
-                    './fonts/Mulish-Regular.woff',
-                    './fonts/Mulish-Regular.woff2',
-                    './fonts/Mulish-SemiBold.eot',
-                    './fonts/Mulish-SemiBold.ttf',
-                    './fonts/Mulish-SemiBold.woff',
-                    './fonts/Mulish-SemiBold.woff2',
                 ]);
             });
         })
